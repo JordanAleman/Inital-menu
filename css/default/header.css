@@ -1,0 +1,249 @@
+/* -------------------------
+/*     Estilos Generales     */
+/* ------------------------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+}
+
+ul {
+    padding-left: 1rem;
+    /* font-size: 15px; */
+}
+
+
+input[type=date],
+input[type=datetime-local],
+input[type=month],
+input[type=time] {
+    -webkit-appearance: none;
+}
+
+:root {
+    --nav: #264653;
+    --links: #dda15e;
+    --linksHover: #d00000;
+    --button: #1B998B;
+    --text: #000;
+    --main: #C5D86D;
+    --clean: #FFF;
+}
+
+
+i {
+    opacity: 0.2;
+}
+
+header {
+    position: sticky;
+    top: 0;
+
+    z-index: 999;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                               Navbar Cabecera                              */
+/* -------------------------------------------------------------------------- */
+.navbarHeaderResponsive {
+    background-color: var(--nav);
+    display: none;
+
+}
+
+.navbarTogglerEstilo {
+    background-color: var(--clean);
+}
+
+
+.contenedorIconoBuscarYLoginNavbarResponsive {
+    display: none;
+    margin-right: 1.5rem;
+}
+
+.contenedorIconoBuscarYLoginNavbarResponsive a{
+    color: var(--clean);
+}
+
+.contenedorIconoBuscarYLoginNavbarPrincipalResponsive {
+    display: none;
+    margin-right: 1rem;
+}
+
+.contenedorIconoBuscarYLoginNavbarPrincipalResponsive a {
+    color: var(--clean);
+}
+
+.contenedorIconoBuscarYLoginNavbarResponsive a:hover, .contenedorIconoBuscarYLoginNavbarPrincipalResponsive a:hover {
+    color: var(--linksHover);
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                              Navbar Principal                              */
+/* -------------------------------------------------------------------------- */
+.navbarPrincipal {
+    position: relative;
+    padding: 0;
+}
+
+
+.contenidoCollapseNavbarHeader {
+    padding: 1rem 10rem;
+}
+
+.contenidoCollapseNavbarPrincipal {
+    background-color: var(--nav);
+}
+
+.contenidoCollapseNavbarPrincipal .fechaNavbarActual{
+    color: var(--main);
+    font-weight: bold;
+
+    margin-right: 3rem;
+}
+
+.contenidoCollapseNavbarPrincipal li {
+    margin-left: 1rem;
+}
+
+
+.contenidoCollapseNavbarPrincipal li a{
+    color: var(--links);
+    font-weight: bold;
+    font-size: 20px;
+    transition: ease 0.5s;
+
+}
+
+.contenidoCollapseNavbarPrincipal li a:hover {
+    color: var(--linksHover);
+    transform: scale(1.2);
+    transition: ease 0.5s;
+}
+
+.botonBuscarNavbar {
+    font-weight: bold;
+    color: var(--links);
+
+    border: 1px var(--links) solid;
+    transition: 1s ease all;
+}
+
+.botonLogin {
+    font-size: 16px;
+    color: var(--links);
+
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-right: 2rem;
+
+    font-weight: bold;
+
+    border: 1px var(--links) solid;
+    transition: .5s ease all;
+}
+
+
+.botonBuscarNavbar:hover, .botonLogin:hover {
+    background-color: var(--main);
+    color: var(--linksHover);
+
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                              Navbar Secundario                             */
+/* -------------------------------------------------------------------------- */
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                Media Querys                                */
+/* -------------------------------------------------------------------------- */
+@media (max-width: 1520px) {
+    .contenidoCollapseNavbarHeader {
+        padding: 1rem 6rem;
+    }
+
+    
+    
+}
+
+@media (max-width: 1320px) {
+    .contenedorInputBuscarNavbarResponsive {
+        display: none;
+    }
+    
+    .contenedorIconoBuscarYLoginNavbarPrincipalResponsive {
+        display: inherit;
+    }
+    
+    .botonBuscarNavbar {
+        display: none;
+    }
+    
+    .contenedorBotonLoginNavbarPrincipal {
+        display: none;
+    }
+}
+
+
+@media (max-width: 991px) {
+
+    /* -------------------------------------------------------------------------- */
+    /*                               Navbar Cabecera                              */
+    /* -------------------------------------------------------------------------- */
+    .navbarHeaderResponsive {
+        display: flex;
+    }
+
+    .fechaNavbarActual {
+        display: none;
+    }
+
+    .contenedorIconoBuscarYLoginNavbarPrincipalResponsive {
+        display: none;
+    }
+
+    .contenedorIconoBuscarYLoginNavbarResponsive {
+        display: inherit;
+    }
+
+
+    /* -------------------------------------------------------------------------- */
+    /*                              Navbar Principal                              */
+    /* -------------------------------------------------------------------------- */
+
+    .contenidoCollapseNavbarHeader {
+        padding-left: 2.5rem;
+    }
+
+    .contenidoCollapseNavbarHeader li {
+        margin-left: 0;
+        border-bottom: 1px var(--links) solid;
+
+    }
+
+    .contenidoCollapseNavbarHeader li:hover {
+        border-bottom: 3px var(--linksHover) solid;
+    }
+
+    .contenidoCollapseNavbarHeader li a:hover {
+        transform: scale(1);
+    }
+
+/* -------------------------------------------------------------------------- */
+/*                              Navbar Secundario                             */
+/* -------------------------------------------------------------------------- */
+
+}
+
